@@ -1,10 +1,7 @@
 module Bacnet;
 
 export {
-    redef enum Log::ID += { LOG_BACNET,
-                            LOG_BACNET_DISCOVERY,
-                            LOG_BACNET_PROPERTY,
-                            LOG_BACNET_DEVICE_CONTROL};
+    redef enum Log::ID += { LOG_BACNET };
 
     ###############################################################################################
     ################################  BACnet_Header -> bacnet.log  ################################
