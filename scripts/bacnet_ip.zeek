@@ -11,7 +11,7 @@ export {
         uid                     : string           &log &optional;   # Zeek unique ID for connection
         id                      : conn_id          &log &optional;   # Zeek connection struct (addresses and ports)
         proto                   : transport_proto  &log &optional;   # The transport layer protocol of the connection
-        pdu_service             : string           &log &optional;   # Types of Protocol Data Unit service
+        pdu_service             : string           &log &optional;   # Name of Protocol Data Unit service
         pdu_type                : string           &log &optional;   # APDU type (see apdu_types)
         obj_type                : string           &log &optional;   # BACnetObjectIdentifier object (see object_types)
 		number                  : int              &log &optional;
