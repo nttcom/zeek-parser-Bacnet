@@ -26,11 +26,11 @@ zeek version 5.0.0
 ~$ git clone https://github.com/nttcom/zeek-parser-Bacnet.git
 ```
 
-同様にZeekファイルを以下のパスにコピーします。
+Zeekファイルを以下のパスにコピーします。
 ```
 ~$ cd ~/zeek-parser-Bacnet/scripts/
-~$ cp bacnet_ip.zeek /usr/local/zeek/share/zeek/site/icsnpp-bacnet/
-~$ cp consts_bacnet_ip.zeek /usr/local/zeek/lib/zeek/plugins/packages/icsnpp-bacnet/scripts/
+~$ cp bacnet_ip.zeek /usr/local/zeek/share/zeek/site/icsnpp-bacnet/main.zeek
+~$ cp consts_bacnet_ip.zeek /usr/local/zeek/lib/zeek/plugins/packages/icsnpp-bacnet/scripts/consts.zeek
 ```
 
 最後にZeekプラグインをインポートします。
