@@ -42,7 +42,7 @@ Zeekファイルを以下のパスにコピーします。
 
 本プラグインを使うことで `bacnet.log` が生成されます。
 ```
-~$ zeek -Cr zeek-parser-Bacnet/testing/Traces/test.pcap bacnet_ip.zeek
+~$ zeek -Cr zeek-parser-Bacnet/testing/Traces/test.pcap main.zeek
 ```
 
 ## ログのタイプと説明
