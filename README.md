@@ -76,7 +76,7 @@ zeek version 5.0.0
 83079.679847	Cifz3n4zRoW5N4c3Fg	10.0.20.24	47808	10.0.30.35	47808	udp	atomic_write_file	ConfirmedRequest	file	4	83136.235718
 83076.790637	Czf30y4FoJ43aMrB47	10.0.20.22	47808	10.0.30.27	47808	udp	who_is	UnconfirmedRequest	(empty)	8	83138.226848
 83076.042712	C6QrIv2oRwgQMqYYc5	10.0.20.23	47808	10.0.30.31	47808	udp	who_has	UnconfirmedRequest	(empty)	12	83147.742865
-#close  2023-05-27-00-52-06
+#close	2023-08-22-02-33-43
 ```
 
 ## 関連ソフトウエア
