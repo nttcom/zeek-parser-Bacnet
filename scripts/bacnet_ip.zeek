@@ -506,24 +506,24 @@ event bacnet_read_range_ack(c: connection,
 
 
 # 集約 local debug用
-# event zeek_done(){
-# 	for ( i in res_aggregationData ){
-# 		local bacnet_log: BACnet_Header = [];
-# 		bacnet_log$ts = res_aggregationData[i]$ts_s;
-# 		bacnet_log$uid = i$uid;
-#         bacnet_log$id = i$id;
-#         bacnet_log$proto = i$proto;
-#         bacnet_log$pdu_service = i$pdu_service;
-#         bacnet_log$pdu_type  = i$pdu_type;
-#         bacnet_log$obj_type  = i$obj_type;
+event zeek_done(){
+	for ( i in res_aggregationData ){
+		local bacnet_log: BACnet_Header = [];
+		bacnet_log$ts = res_aggregationData[i]$ts_s;
+		bacnet_log$uid = i$uid;
+        bacnet_log$id = i$id;
+        bacnet_log$proto = i$proto;
+        bacnet_log$pdu_service = i$pdu_service;
+        bacnet_log$pdu_type  = i$pdu_type;
+        bacnet_log$obj_type  = i$obj_type;
 
-# 		if ( res_aggregationData[i]?$num ){
-# 			bacnet_log$number = res_aggregationData[i]$num;
-# 		}
-#         if ( res_aggregationData[i]?$ts_e ){
-# 			bacnet_log$ts_end = res_aggregationData[i]$ts_e;
-# 		}
+		if ( res_aggregationData[i]?$num ){
+			bacnet_log$number = res_aggregationData[i]$num;
+		}
+        if ( res_aggregationData[i]?$ts_e ){
+			bacnet_log$ts_end = res_aggregationData[i]$ts_e;
+		}
 
-# 		Log::write(LOG_BACNET, bacnet_log);
-# 	}
-# }
+		Log::write(LOG_BACNET, bacnet_log);
+	}
+}
