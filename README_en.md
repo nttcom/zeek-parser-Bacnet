@@ -35,7 +35,7 @@ Then, copy the zeek file to the following paths.
 Finally, import the Zeek plugin.
 ```
 ~$ tail /usr/local/zeek/share/zeek/site/local.zeek
-...省略...
+... Omit ...
 @load icsnpp-bacnet
 ```
 
