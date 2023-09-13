@@ -41,7 +41,8 @@ Finally, import the Zeek plugin.
 
 This plug-in generates a `bacnet.log` by the command below:
 ```
-~$ zeek -Cr zeek-parser-Bacnet/testing/Traces/test.pcap main.zeek
+~$ cd ~/zeek-parser-Bacnet/testing/Traces
+~$ zeek -Cr test.pcap /usr/local/zeek/share/zeek/site/icsnpp-bacnet/main.zeek
 ```
 
 ## Log type and description
