@@ -6,24 +6,18 @@ English is [here](https://github.com/nttcom/zeek-parser-Bacnet/blob/main/README_
 
 Zeek-Parser-BacnetとはBacnetを解析できるZeekプラグインです。
 
-## 使い方
+## インストール
 
-### パッケージマネージャ
+### パッケージマネージャーによるインストール
 
-このスクリプトは[Zeek Package Manger](https://docs.zeek.org/projects/package-manager/en/stable/index.html)用のパッケージとして提供されています。
+このプラグインは[Zeek Package Manger](https://docs.zeek.org/projects/package-manager/en/stable/index.html)用のパッケージとして提供されています。
+
+以下のコマンドを実行することで、本プラグインは利用可能になります。
 
 ```
 zkg refresh
 zkg install icsnpp-bacnet
 zkg install zeek-parser-Bacnet
-```
-
-上記のコマンドを実行した後、本プラグインは利用可能なプラグインに追加されます。
-
-以下の様に本プラグインを使うことで `bacnet.log` が生成されます。
-
-```
-zeek -Cr /usr/local/zeek/var/lib/zkg/clones/package/zeek-parser-Bacnet/testing/Traces/test.pcap zeek-parser-Bacnet
 ```
 
 ### マニュアルインストール
@@ -44,6 +38,18 @@ zeek version 5.0.0
 ~$ git clone https://github.com/nttcom/zeek-parser-Bacnet.git
 ```
 
+## 使い方
+
+### パッケージマネージャーによるインストールの場合
+
+以下のように本プラグインを使うことで `bacnet.log` が生成されます。
+
+```
+zeek -Cr /usr/local/zeek/var/lib/zkg/clones/package/zeek-parser-Bacnet/testing/Traces/test.pcap zeek-parser-Bacnet
+```
+
+### マニュアルインストールの場合
+
 Zeekファイルを以下のパスにコピーします。
 ```
 ~$ cd ~/zeek-parser-Bacnet/scripts/
@@ -51,7 +57,7 @@ Zeekファイルを以下のパスにコピーします。
 ~$ cp consts_bacnet_ip.zeek /usr/local/zeek/lib/zeek/plugins/packages/icsnpp-bacnet/scripts/consts.zeek
 ```
 
-最後にZeekプラグインをインポートします。
+Zeekプラグインをインポートします。
 ```
 ~$ tail /usr/local/zeek/share/zeek/site/local.zeek
 ...省略...
