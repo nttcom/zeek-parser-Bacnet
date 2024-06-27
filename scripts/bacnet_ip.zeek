@@ -41,11 +41,11 @@ export {
 	info_insert$ts = res_aggregationData[idx]$ts_s;
 	info_insert$uid = idx$uid;
 	info_insert$id = idx$id;
-    info_insert$proto = idx$proto;
-    info_insert$pdu_service = idx$pdu_service;
-    info_insert$pdu_type  = idx$pdu_type;
-    info_insert$obj_type  = idx$obj_type;
-    if ( res_aggregationData[idx]?$num ){
+    	info_insert$proto = idx$proto;
+    	info_insert$pdu_service = idx$pdu_service;
+    	info_insert$pdu_type  = idx$pdu_type;
+    	info_insert$obj_type  = idx$obj_type;
+    	if ( res_aggregationData[idx]?$num ){
 		info_insert$number = res_aggregationData[idx]$num;
 	}
 	if ( res_aggregationData[idx]?$ts_e ){
@@ -91,11 +91,11 @@ function create_aggregationData(bacnet_log: BACnet_Header): AggregationData
 	{
 	local aggregationData: AggregationData;
 	aggregationData$uid = bacnet_log$uid;
-    aggregationData$id = bacnet_log$id;
-    aggregationData$proto = bacnet_log$proto;
-    aggregationData$pdu_service = bacnet_log$pdu_service;
-    aggregationData$pdu_type  = bacnet_log$pdu_type;
-    aggregationData$obj_type  = bacnet_log$obj_type;
+    	aggregationData$id = bacnet_log$id;
+   	aggregationData$proto = bacnet_log$proto;
+    	aggregationData$pdu_service = bacnet_log$pdu_service;
+    	aggregationData$pdu_type  = bacnet_log$pdu_type;
+    	aggregationData$obj_type  = bacnet_log$obj_type;
 
 	return aggregationData;
 	}
@@ -184,8 +184,7 @@ event bacnet_apdu_header(c: connection,
 event bacnet_npdu_header(c: connection,
                          is_orig: bool,
                          bvlc_function: count,
-                         npdu_message_type: count,
-                         destination_address: count){
+                         npdu_message_type: count){
 
     set_service(c);
     local bacnet_log: BACnet_Header;
